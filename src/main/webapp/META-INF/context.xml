@@ -1,0 +1,11 @@
+<!-- <Context path="/mywebapp" docBase="/Users/theuser/mywebapp/src/main/webapp"> -->
+<!--   <Resources className="org.apache.naming.resources.VirtualDirContext" -->
+<!--     extraResourcePaths="/WEB-INF/classes=/Users/theuser/mywebapp/target/classes,/pictures=/Users/theuser/mypictures,/movies=/Users/theuser/mymovies" /> -->
+<!--   <Loader className="org.apache.catalina.loader.VirtualWebappLoader" -->
+<!--    virtualClasspath="/Users/theuser/mywebapp/target/classes;/Users/theuser/mylib/target/classes;/Users/theuser/.m2/repository/log4j/log4j/1.2.15/log4j-1.2.15.jar" /> -->
+<!--   <JarScanner scanAllDirectories="true" /> -->
+<!-- </Context> -->
+
+<Context path="/cdweb">
+  <WatchedResource>WEB-INF/web.xml</WatchedResource>
+</Context>
