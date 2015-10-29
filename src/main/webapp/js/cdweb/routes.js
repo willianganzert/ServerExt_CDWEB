@@ -7,6 +7,9 @@ angular.module("cdweb")
             .when('/wellcome', {
                 templateUrl: 'wellcome.html'
             })
+            .when('/login', {
+                templateUrl: 'login.html'
+            })
             .when('/config', {
                 templateUrl: 'configuration.html',
                 controller: 'ConfigurationController'
