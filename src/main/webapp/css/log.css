@@ -39,9 +39,14 @@
  * General styles
  */
 body, html {
+
+}
+.wrapper{
+    width: 100%;
     height: 100%;
+    position: fixed;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(249, 249, 249), rgb(253, 253, 253)););
+    background-image: linear-gradient(rgb(117, 188, 118), rgb(117, 188, 118)););
 }
 
 .card-container.card {

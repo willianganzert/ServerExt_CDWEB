@@ -10,9 +10,14 @@ angular.module("cdweb")
             .when('/login', {
                 templateUrl: 'login.html'
             })
+
             .when('/config', {
                 templateUrl: 'configuration.html',
                 controller: 'ConfigurationController'
+            })
+            .when('/menu', {
+                templateUrl: 'menu.html',
+                controller: 'MenuController'
             })
             .when('/Book/:bookId/ch/:chapterId', {
                 templateUrl: 'chapter.html',
