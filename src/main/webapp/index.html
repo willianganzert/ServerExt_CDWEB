@@ -11,14 +11,21 @@
 	<!--AngularJS!-->
 </head>
 <body>
-	<div class="menu">
-		<a href="./#/config">Configurar</a>
-	</div>
-	<div ng-view>
-		s
-	</div>
+<div class="wrapper">
+	<div class="header-bar  centered">
+		<div class="header content clearfix">
 
-	<hr />
+		</div>
+	</div>
+	<div class="main content clearfix" ng-view>
+
+	</div>
+	<div class="footer-bar">
+		<div class="footer content clearfix">
+
+		</div>
+	</div>
+</div>
 </body>
 
 <!--ANGULARJS!-->
@@ -34,6 +41,9 @@
 <script type="application/javascript" src="js/angular/angular-scenario.js"></script>
 <script type="application/javascript" src="js/angular/angular-locale_pt-br.js"></script>
 <script type="application/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="application/javascript" src="js/ui-bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+
 
 
 <!--CDWEB!-->

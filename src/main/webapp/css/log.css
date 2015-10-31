@@ -1,29 +1,259 @@
- #log {       width:  300px;
-              height: 450px;
-    
-              position: absolute;
-              left: 50%;
-              top:  50%;
-    
-             margin-left: -150px;
-             margin-top:  -225px;
-			 background-color:#FFFFFF;
-  }
-  
-  #login-logo {
+@font-face {
+    font-family: ubuntu;
+    src: url(../fonts/ubuntu/Ubuntu-B.ttf);
+}
+#log {
+    background-color: #f7f7f7;
+    width: 300px;
+    /*height: 450px;*/
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    margin-left: -150px;
+    margin-top: -200px;
+}
+
+#login-logo {
     display: block;
     margin: 13px auto 13px auto;
-	font-weight: bold;
+    font-weight: bold;
     font-size: 16px;
-	font-family: COURIER;
-  }
-  
-  #welcome-text {
+}
+
+#welcome-text {
     color: #747675;
     display: block;
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 15px;
-  }
+}
+
+
+
+/*
+ * Specific styles of signin component
+ */
+/*
+ * General styles
+ */
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(249, 249, 249), rgb(253, 253, 253)););
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    /*-moz-border-radius: 50%;*/
+    /*-webkit-border-radius: 50%;*/
+    /*border-radius: 50%;*/
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    cursor: pointer;
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: rgb(1, 114, 188);
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(1, 114, 188);
+}
           
-  
+.header-bar{
+    border-bottom-color: rgb(64, 64, 64);
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(64, 64, 64);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(64, 64, 64);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(64, 64, 64);
+    border-top-style: none;
+    border-top-width: 0px;
+    color: rgb(64, 64, 64);
+    direction: ltr;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    height: 108px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+.header-bar,.header{
+    color: rgb(64, 64, 64);
+    direction: ltr;
+    display: block;
+
+    padding-bottom: 0px;
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-top: 0px;
+    zoom: 1;
+}
+.logo{
+    font-family: ubuntu, sans-serif;
+    color: rgb(1, 114, 188);
+    direction: ltr;
+    display: block;
+    float: none;
+    height: 38px;
+    margin-left: 25%;
+    zoom: 1;
+}
+
+.footer-bar {
+    border-top-color: rgb(229, 229, 229);
+    border-top-style: solid;
+    border-top-width: 1px;
+    bottom: 0px;
+    color: rgb(64, 64, 64);
+    direction: ltr;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    height: 35px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.footer-bar,.footer{
+    color: rgb(64, 64, 64);
+    direction: ltr;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 11.05px;
+    height: 38.0938px;
+    line-height: 0px;
+    padding-bottom: 0px;
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-top: 7px;
+    white-space: nowrap;
+    zoom: 1;
+}
