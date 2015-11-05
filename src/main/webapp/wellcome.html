@@ -5,8 +5,46 @@
     <title>Wellcome</title>
 </head>
 <body>
-    Seja bem vindo!
+<img id="profile-img" align="left" class="profile-img-card" src="./img/blue-home-icon.png" />
+<h2 class="log" align="left"> SoftHome    </h2>
+<div class="container">
+    <div class="card card-user-container">
+    <h3 class="cad cad-title">
+        Cadastro de Usuário
+    </h3>
 
-    <img src="C:\Desenvolvimento\ServerExt_CDWEB\src\main\webapp\conf.png"/></a>
+
+    <div>
+    <form>
+
+        <label for="name">Nome:</label>
+        <input type="text" class="form-control" size="40" id="name" />
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" size="40" id="email" />
+        <!--<img src="usuario.png" align="right" alt="Windows" width="150"/>-->
+        <label for="name">Senha:</label>
+        <input type="password" class="form-control" size="40" name="pass">
+        <label for="passconfirm">Confirme a senha: </label>
+        <input type="password" id="passconfirm" class="form-control"size="40" name="pass">
+        <label for="phonenum">Número de telefone:</label>
+        <input pattern="^\d{4}-\d{3}-\d{4}$" id="phonenum" class="form-control" type="tel">
+        <p>
+
+        </p>
+
+        <p>
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <input type="reset" value="Limpar" class="btn btn-warning">
+
+        </p>
+
+    </form>
+
+    </article>
+
+</div>
+    </div>
+</div>
+
 </body>
 </html>
