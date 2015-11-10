@@ -1,4 +1,4 @@
-package br.com.cdweb.services;
+package br.com.cdweb.server.services;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
