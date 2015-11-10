@@ -27,7 +27,7 @@ public class Configuration {
 	
 	@Context
 	String ip;
-
+/**/
 	@GET
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	public String getIP() {
