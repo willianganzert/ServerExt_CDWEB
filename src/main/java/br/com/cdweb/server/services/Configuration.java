@@ -14,16 +14,16 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.xml.ws.WebServiceContext;
-import javax.xml.ws.handler.MessageContext;
 
-import br.com.cdweb.persistence.entities.Configuracoes;
+import br.com.cdweb.persistence.domain.Configuracoes;
 
-@Path("/config")
+
+@Path("config")
 public class Configuration {
 	@Resource
 	WebServiceContext wsContext;
 	@Context 
-	private javax.servlet.http.HttpServletRequest hsr;
+	private HttpServletRequest hsr;
 	
 	@Context
 	String ip;
