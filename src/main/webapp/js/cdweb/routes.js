@@ -4,8 +4,8 @@
 angular.module("cdweb")
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
-            .when('/wellcome', {
-                templateUrl: 'wellcome.html',
+            .when('/usuario', {
+                templateUrl: 'usuario.html',
                 controller:'CadController'
             })
             .when('/login', {

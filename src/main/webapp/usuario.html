@@ -5,8 +5,7 @@
     <title>Wellcome</title>
 </head>
 <body>
-<img id="profile-img" align="left" class="profile-img-card" src="./img/blue-home-icon.png" />
-<h2 class="log" align="left"> SoftHome    </h2>
+<li class='active has-sub'></li><span><img src="./img/blue-home-icon.png" alt="Windows" width="56"  margin="20"/>SoftHome</span>
 <div class="container">
     <div class="card card-user-container">
     <h3 class="cad cad-title">
@@ -33,8 +32,11 @@
         </p>
 
         <p>
+            <a ng-click="createNewUser()"></a> <button type="submit" class="btn btn-success">Novo</button>
             <button type="submit" class="btn btn-success">Salvar</button>
-            <input type="reset" value="Limpar" class="btn btn-warning">
+            <a ng-click="editUser(user.id)"></a><input type="reset" value="Editar" class="btn btn-success">
+           <a ng-click="deleteUser(user.id)"></a> <button type="submit" class="btn btn-success">Deletar</button>
+
 
         </p>
 
