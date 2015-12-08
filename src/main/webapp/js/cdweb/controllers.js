@@ -17,3 +17,48 @@ angular.module("cdweb")
         }
     }])
 
+    .controller("UsuarioController",['$scope', 'UserFactory','$routeParams', '$location', function($scope, UserFactory, $routeParams, $location){
+        $scope.menu = "Menu da ";
+        $scope.nome = "";
+        $scope.$root.header = true;
+        $scope.user = {};
+
+        $scope.buscarusuario = function(idUsuario) {
+        	$scope.user = UserFactory.show({id: idUsuario});
+
+        }        
+        $scope.cancelar = function(){
+        	  $location.path('/menu');
+        }
+                
+        $scope.gravar = function () {
+            UserFactory.update($scope.user);
+            $location.path('/menu');
+        };
+
+
+        $scope.buscarusuario(1);
+    }])
+    
+    .controller("ModeloController",['$scope', 'ModelFactory','$routeParams', '$location', function($scope, UserFactory, $routeParams, $location){
+        $scope.menu = "Menu da ";
+        $scope.nome = "";
+        $scope.$root.header = true;
+        $scope.modelo = {};
+
+        $scope.buscarparametro = function(idModeloAcao) {
+        	$scope.modelo = ModelFactory.show({id: idModeloAcao});
+
+        }        
+        $scope.cancelar = function(){
+        	  $location.path('/menu');
+        }
+                
+        $scope.gravar = function () {
+            UserFactory.update($scope.modelo);
+            $location.path('/menu');
+        };
+
+
+        $scope.buscarparametro(1);
+    }])

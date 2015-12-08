@@ -6,11 +6,16 @@ angular.module("cdweb")
         $routeProvider
             .when('/usuario', {
                 templateUrl: 'usuario.html',
-                controller:'CadController'
+                controller:'UsuarioController'
             })
             .when('/login', {
                 templateUrl: 'login.html'
             })
+            
+    
+              .when('/listausuario', {
+                   templateUrl: 'listausuario.html'
+             })
 
 
             .when('/config', {
@@ -29,7 +34,8 @@ angular.module("cdweb")
             })
 
             .when('/dispositivo', {
-                templateUrl: 'dispositivo.html'
+                templateUrl: 'dispositivo.html',
+                 controller:'ModeloController'
             })
 
 
@@ -38,7 +44,7 @@ angular.module("cdweb")
                 controller: 'ChapterController'
             })
             .otherwise({
-                redirectTo: '/wellcome'
+                redirectTo: '/login'
             });
 
     }]);
