@@ -32,6 +32,8 @@ angular.module("cdweb")
             .when('/predefinicoes', {
                 templateUrl: 'predefinicoes.html'
             })
+            
+          
 
             .when('/dispositivo', {
                 templateUrl: 'dispositivo.html',
