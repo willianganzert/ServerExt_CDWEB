@@ -1,52 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Wellcome</title>
-</head>
-<body>
-<li class='active has-sub'></li><span><img src="./img/blue-home-icon.png" alt="Windows" width="56"  margin="20"/>SoftHome</span>
 <div class="container">
-    <div class="card card-user-container">
-    <h3 class="cad cad-title">
-        Cadastro de Usuário
-    </h3>
+	<div class="card card-user-container">
+		<h3 class="cad cad-title">Cadastro de Usuário</h3>
 
 
-    <div>
-    <form>
+		<div>
+			<form>
 
-        <label for="name">Nome:</label>
-        <input type="text" class="form-control" size="40" id="name" />
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" size="40" id="email" />
-        <!--<img src="usuario.png" align="right" alt="Windows" width="150"/>-->
-        <label for="name">Senha:</label>
-        <input type="password" class="form-control" size="40" name="pass">
-        <label for="passconfirm">Confirme a senha: </label>
-        <input type="password" id="passconfirm" class="form-control"size="40" name="pass">
-        <label for="phonenum">Número de telefone:</label>
-        <input pattern="^\d{4}-\d{3}-\d{4}$" id="phonenum" class="form-control" type="tel">
-        <p>
-
-        </p>
-
-        <p>
-            <a ng-click="createNewUser()"></a> <button type="submit" class="btn btn-success">Novo</button>
-            <button type="submit" class="btn btn-success">Salvar</button>
-            <a ng-click="editUser(user.id)"></a><input type="reset" value="Editar" class="btn btn-success">
-           <a ng-click="deleteUser(user.id)"></a> <button type="submit" class="btn btn-success">Deletar</button>
+				<label for="name">Nome:</label> <input type="text"
+					class="form-control" size="40" id="name" ng-model="user.nome" /> <label
+					for="email">Email:</label> <input type="email" class="form-control"
+					size="40" id="email" ng-model="user.login" />
+				<!--<img src="usuario.png" align="right" alt="Windows" width="150"/>-->
+				<label for="name">Senha:</label> <input type="password"
+					class="form-control" size="40" name="pass" ng-model="user.senha">
+				<!--         <label for="passconfirm">Confirme a senha: </label> -->
+				<!--         <input type="password" id="passconfirm" class="form-control"size="40" name="pass"> -->
+				<label for="phonenum">Número de telefone:</label> <input
+					pattern="^[\d]+$" id="phonenum" class="form-control" type="tel"
+					ng-model="user.telefone">
+				<p>
+				<p>
+					<input type="reset" value="Salvar" class="btn btn-success"
+						ng-click="gravar()"> <input type="reset" value="Cancelar"
+						class="btn btn-success" ng-click="cancelar()">
 
 
-        </p>
+				</p>
 
-    </form>
+			</form>		
 
-    </article>
-
+		</div>
+	</div>
 </div>
-    </div>
-</div>
-
-</body>
-</html>
