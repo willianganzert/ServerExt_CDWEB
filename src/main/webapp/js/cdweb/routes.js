@@ -37,7 +37,7 @@ angular.module("cdweb")
 
             .when('/dispositivo', {
                 templateUrl: 'dispositivo.html',
-                 controller:'ModeloController'
+                 controller:'ModeloDispositivoController'
             })
 
 
