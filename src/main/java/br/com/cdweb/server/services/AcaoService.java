@@ -9,6 +9,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
+import br.com.cdweb.mensagens.StatusMensagem;
+import br.com.cdweb.persistence.domain.FilaEventoExecutar;
 import br.com.cdweb.persistence.domain.ModeloAcao;
 import br.com.cdweb.persistence.domain.Usuario;
 import br.com.cdweb.persistence.jpa.JpaAllEntities;
@@ -25,7 +27,11 @@ public class AcaoService {
 		ModeloAcao modeloAcao = JpaAllEntities.findById(id, ModeloAcao.class);
 		if(modeloAcao != null){
 			Usuario usuario = getUsuarioSessao(req);
-			
+			FilaEventoExecutar eventoExecutar = new FilaEventoExecutar();
+			eventoExecutar.setModelo_acao(modeloAcao);
+			eventoExecutar.setStatus(StatusMensagem.A);
+			eventoExecutar.setUsuario(usuario);
+			JpaAllEntities.insert(eventoExecutar);
 			requisicao.setStatusOK();
 		}
 				
