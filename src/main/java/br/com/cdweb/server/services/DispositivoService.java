@@ -2,7 +2,9 @@ package br.com.cdweb.server.services;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -24,9 +26,10 @@ public class DispositivoService extends TemplateCRUDService<Dispositivo>{
 		super(type);
 	}
 	
-	@GET
+	@POST
 	@Path("/{id}/parametros")
-    @Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
     public List<Parametro> buscarParametrosDispositivo(@PathParam("id") long id) {
 		Dispositivo dispositivo = new Dispositivo();
 		dispositivo.setIdDispositivo(id);

@@ -5,9 +5,9 @@
     </h3>
        <div>
        <div>Dispositivo Config: </div>
-       <select> 
-       <option ng-repeat="item in [{id:1,nome:'Lampada'},{id:2,nome:'TV'}]">{{item.nome}}</option>
+       <select ng-options="item as item.nome for item in dispositivos" ng-model="modelo.dispositivo"> 
        </select>
+<!--        {{modelo.dispositivo}} -->
     </div>
 
     <div>
@@ -16,9 +16,15 @@
     </div>
 <p>
 
+<div>
+       <div>Nome Ação:</div>
+        <input type="text" name="descricao" ng-model="modeloacao.nome">
+        
+    </div>
       <div>
-       <div>Ação do Dispositivo: </div>
-        <input type="text" name="dispositivo" ng-model="modelo.descricao">
+       <div>Descrição Ação</div>
+        <input type="text" name="descricao" ng-model="modeloacao.descricao">
+        
     </div>
 <p>
       
@@ -30,6 +36,7 @@
             <option>Sim</option>
             <option>Nao</option>
         </select>
+        {{parametros}}
     </div>
     <p>
     <p>

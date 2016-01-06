@@ -40,14 +40,25 @@ angular.module("cdweb")
         $scope.buscarusuario(1);
     }])
     
-    .controller("ModeloController",['$scope', 'ModelFactory','$routeParams', '$location', function($scope, UserFactory, $routeParams, $location){
-        $scope.menu = "Menu da ";
+    .controller("ModeloDispositivoController",['$scope', 'DispositivoFactory','$routeParams', '$location', 'ModeloDispositivoFactory', 'ModeloAcaoFactory',  function($scope, DispositivoFactory, $routeParams, $location, ModeloDispositivoFactory, ModeloAcaoFactory){
+        $scope.dispositivos = DispositivoFactory.query(); 
         $scope.nome = "";
         $scope.$root.header = true;
         $scope.modelo = {};
+        $scope.modeloacao = {};
+        
 
-        $scope.buscarparametro = function(idModeloAcao) {
-        	$scope.modelo = ModelFactory.show({id: idModeloAcao});
+        $scope.$watch("modelo.dispositivo", function(newValue,oldValue){
+        	if(newValue){
+        		$scope.parametros = DispositivoFactory.getParametros(newValue)	
+        	}
+        	else{
+        		$scope.parametros = null;
+        	}
+        	
+        })
+        $scope.buscar= function(idModeloAcao) {
+//        	$scope.modelo = ModelFactory.show({id: idModeloAcao});
 
         }        
         $scope.cancelar = function(){
@@ -55,10 +66,13 @@ angular.module("cdweb")
         }
                 
         $scope.gravar = function () {
-            UserFactory.update($scope.modelo);
-            $location.path('/menu');
+        	ModeloDispositivoFactory[$scope.modelo.idDispositivo?"update":"save"]($scope.modelo, function(dadosModeloDispositivo){
+        		$scope.modeloacao.modeloDispositivo = dadosModeloDispositivo;
+        		ModeloAcaoFactory[$scope.modeloacao.idAcao?"update":"save"]($scope.modeloacao);
+
+                $location.path('/menu');
+        	});        	
         };
 
-
-        $scope.buscarparametro(1);
+        
     }])
